@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://meik2333.com/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://meik2333.com/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://meik2333.com/css/github.min.css' />
+    <link rel="stylesheet" href='https://meik2333.com/css/github-style.css' />
+    <link rel="stylesheet" href='https://meik2333.com/css/light.css' />
+    <link rel="stylesheet" href='https://meik2333.com/css/dark.css' />
+    <link rel="stylesheet" href='https://meik2333.com/css/syntax.css' />
+    <title>Description - 64 Bit Operating System</title>
+    
+    <link rel="icon" type="image/x-icon" href='2.jpg'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="Description :   64 Bit Operating System :   We are making a 64 bit Operating System from the scratch . In this assignment we will make x86 compatible Operating System that is multi boot 2 and then on later on stage ( In Task 2 ) we will expand it to other architecture. This Operating System is primarily written in a C and C&#43;&#43; programming language ( Mingw64 is installed to run these ) but we also used assembly language in some part of our code where we need hardware specific coding." />
+<meta name="keywords"
+  content='blog, OS , kernal , analytics' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://meik2333.com/post/third/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Description - 64 Bit Operating System" />
+<meta name="twitter:description"
+  content="Description :   64 Bit Operating System :   We are making a 64 bit Operating System from the scratch . In this assignment we will make x86 compatible Operating System that is multi boot 2 and then on later on stage ( In Task 2 ) we will expand it to other architecture. This Operating System is primarily written in a C and C&#43;&#43; programming language ( Mingw64 is installed to run these ) but we also used assembly language in some part of our code where we need hardware specific coding." />
+<meta name="twitter:site" content="https://meik2333.com/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://meik2333.com/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Description - 64 Bit Operating System">
+<meta property="og:description"
+  content="Description :   64 Bit Operating System :   We are making a 64 bit Operating System from the scratch . In this assignment we will make x86 compatible Operating System that is multi boot 2 and then on later on stage ( In Task 2 ) we will expand it to other architecture. This Operating System is primarily written in a C and C&#43;&#43; programming language ( Mingw64 is installed to run these ) but we also used assembly language in some part of our code where we need hardware specific coding." />
+<meta property="og:url" content="https://meik2333.com/post/third/" />
+<meta property="og:site_name" content="Description" />
+<meta property="og:image"
+  content="https://meik2333.com/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2021-04-20 17:29:49 &#43;0500 PKT" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://meik2333.com/">
+        <svg class="octicon" height="32" viewBox="0 0 16 16" version="1.1" width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:https://meik2333.com/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://meik2333.com/">
+        <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+          width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://meik2333.com/">
+                  <img class=" avatar-user"
+                    src="https://meik2333.com/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://meik2333.com/">Zainab Ghauri</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="https://meik2333.com/post/third/">Description</a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Tue, 20 Apr 2021 17:29:49 &#43;0500"
+                    class="no-wrap">
+                    Tue, 20 Apr 2021 17:29:49 &#43;0500</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Tue, 20 Apr 2021 17:30:40 &#43;0500"
+                    class="no-wrap">
+                    Tue, 20 Apr 2021 17:30:40 &#43;0500</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div class="file-header d-flex flex-md-items-center flex-items-start">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    1529 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5">
+                <article class="markdown-body entry-content container-lg"><h1 id="description-"><em>Description</em> :</h1>
+<hr>
+<blockquote>
+<h4 id="64-bit-operating-system-">64 Bit Operating System :</h4>
+</blockquote>
+<ul>
+<li>We are making a 64 bit Operating System from the scratch . In this assignment we will make x86 compatible Operating System that is multi boot 2 and then on later on stage ( In Task 2 ) we will expand it to other architecture. This Operating System is primarily  written in a C and C++ programming language ( Mingw64 is installed to run these ) but we also used assembly language in some part of our code where we need hardware specific coding. The Repository holds all the code neccesary for making an Operaating System. The link for it is given in the Github header.</li>
+<li>In the Task 1 we made our own Operating System and setup the basic tooling and prints &ldquo;OK&rdquo; on the console but in the Task 2 we printed the NUST with the help of the Special characters and Alphabets. The image for it is attached in the Word file.</li>
+</ul>
+<blockquote>
+<h4 id="prerequisites-">Prerequisites :</h4>
+</blockquote>
+<ol>
+<li>A text editor such as VS Code.</li>
+<li>Docker for creating our build-environment. (( to simplify the building process and it will allow us to create a reproducible build env)</li>
+<li>Qemu for emulating our operating system.</li>
+<li>Remember to add Qemu to the path so that you can access it from your command-line. (Windows instructions here)</li>
+<li>Nasm Grub</li>
+<li>Mingw64 ( GCC Complier )</li>
+<li>Hugo</li>
+<li>Chocalatey ( For windows )</li>
+</ol>
+<blockquote>
+<h4 id="documentation-">Documentation :</h4>
+</blockquote>
+<pre><code> 1. buldenv/Dockerfile 
+ 2. src/impl/kernel/main.c
+ 3. src/impl/x86-64/print.c
+ 4. src/impl/x86-64/boot/
+    - header.asm 
+    - main.asm
+    - main64.asm
+ 5. src/intf/print.h
+ 6. targets/x86_64/linked.ld
+ 7. targets/x86_64/iso/.gitignore
+ 8. Make File
+ 9. README file
+</code></pre>
+<h4 id="step-1--creates-a-docker-image--">Step 1 ( Creates a Docker Image ) :</h4>
+<hr>
+<ol>
+<li>A docker image is just like a snapshot of a linux machine with any extra file or software installed onto it. In the first step we create a folder and name it as <strong>buildenv</strong> and in here we will create a <strong>docker file</strong> and this file will describe all the steps we <em>need to create our build-senv image</em></li>
+<li>We have added few lines and commands to install some <strong>packages</strong> like the <strong>apt-get command</strong> to install <em>Nasm</em> , <em>Nasm</em> will allow us to compile the assembly code and the <em>grub package</em> to build the final <strong>iso file</strong> ( grub-pc-bin + grub-common) It also set this folder as the starting folder.</li>
+<li>Then we open the <strong>Terminal</strong> and build our image. The one thing we should make sure while doing this step is that our docker should be running. For this we should simply write <strong>docker build buildenv –t myosbuildenv</strong>. The name of the folder should be the same we are writting on a terminal.It is just a name of image , i gave it <em>myosbuildenv</em>  in my case. For the first time it will take 5 minutes approx .</li>
+<li>Now we can open the instance of the image that we called as <strong>Container</strong>. We are in a <em>virtual linux environment</em> with all the tools we need. Make sure the docker daemon has access to the drive.</li>
+</ol>
+<hr>
+<h4 id="step-2--creating-folder-and-respective-files-">Step 2 ( Creating Folder and Respective Files )</h4>
+<ul>
+<li>source folder ( <strong>implementation Folder</strong>)
+<ol>
+<li>We create source folder to store all of our source code , I have followed the same name it has in youtube video to avoid errors but one can organize in any way they want. Firstly we create <strong>implementation (impl) folder</strong> , to hold the all the implementation</li>
+<li>Then we created a <strong>x86 file</strong> , this is the <em>entry point of the Operating System</em> , We have to integrate it with multi boot 2 , to perform this we created a <strong>boot folder</strong> and inside it we created a <strong>header.asm</strong> file , Inside this assembly file we will add some data which is to be included in the operating system binary.</li>
+<li>The boot loader loads first when we turn the computer on , after that the Operating System loads and the duty of a boot loader is to locate the Operating System. We use the multiboot2 Specification that most bootloaders used. In this file we added the header data and its label , and next we add some information about the architecture of our OS.</li>
+<li>Now we create a <strong>main.asm</strong> file in a bootloader folder , this assembly file is the <em>entry point into our Operating System</em>. Put the desired labels and set the bits ( 32 or 64 bits) in main.asm. The hexa code for word &ldquo;Ok&rdquo; is also written in this file that was our task 1 but this will not be used ( the code for &lsquo;ok&rsquo; ) in task 2. In task 2 we will write a <strong>C level programming language code</strong> to print <em>NUST</em>. In the end we used the <strong>Hlt</strong> instruction to completely freeze and not run any further.</li>
+<li><strong>For Task 2</strong> For printing a string of characters on the Screen ( Task 2 ) we have to set a Stack , <em>which will allow us to link in the C code</em>. We will setup the stack in the <strong>main.asm</strong>. To create stack we followed the same code in the video that we are provided with in the video.Because we haven’t studied these commands yet.We will store the stack address using a var named <strong>stack_top</strong> . In some tasks that we have not studied I copied the code from the github.The concept of <strong>virual addressing</strong> has been carried out here so we will have to create a <strong>page tables</strong> in the main.asm file.</li>
+<li><strong>setting up the page tables</strong> : We have four types of page tables, namely L4, L3, L2, L1, so we will reserve memory for page tables.Using the <strong>Identity Mapping</strong>  physical address to the exact same virtual address so that our instructions are executed that a CPU can read the instructions and treat the address as virtual address.After that we <em>filled 512 entries of L2</em> , As each entry takes 2MB so the total will be approx 1GB of physical memory being mapped. Once this is completed <em>we can return from the subroutine</em>.After this we will enable the <strong>paging</strong> , for this we will pass the location of that page table to our CPU.The extension for the page table is enabled by <strong>PAE FLAG of cr4</strong></li>
+<li>Then we created a folder named <strong>targets</strong> , in which we made <strong>x86_64</strong> and <strong>linker file (.ld)</strong>. The linker file is <em>responsible for describing how the Operating System has been linked together</em>. Then we create an <strong>iso folder</strong> that will contain a group configuration.In that folder we also created boot / grub folder.</li>
+<li>After that we created an <strong>interface folder</strong> ( intf) in which we will create a <strong>print.h</strong> file , we will use a <strong>pragma once directive</strong> &amp; will define the printing interface here that we will use in our coding.Various methods for printing is created in this file.Include the libraries like <em>stdio.h stdnnf.h</em> etc . Also after that I just copied the color codes from the github file. Then in the <strong>print.c</strong> File , there is a video memory that holds an array of characters , to handle this we created a char struct. The code in these files are not in our lectures so I just copy pasted it.It is basically an implemenation of the <strong>print.h</strong> file.</li>
+<li>The <strong>main.c file</strong> , this is the main file whose function <strong>kernel_main</strong> is called for printing the required text or pattern on the screen. (i.e NUST)</li>
+<li>In the Last step we made a <strong>Make file</strong> ,  <strong>Make</strong> is handy tool for <em>organizing all of our build commands</em>. After we are done with above mentioned steps , we haved open the terminal inside the docker container followed by <strong>build x86_64</strong> , after that some processing has done after it finished we <strong>exit</strong> the docker container by writing exit on the terminal &amp; using <strong>qemu</strong> we will emulate the Operating System by writing <strong>qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso</strong> and the text will be printed on the screen ( NUST using alphabets and special Characters).</li>
+</ol>
+</li>
+</ul>
+<hr>
+<blockquote>
+<h4 id="setup-">Setup :</h4>
+</blockquote>
+<pre><code>&gt; Build an image for our build-environment:
+   - docker build buildenv -t myos-buildenv
+1. Windows (PowerShell): 
+   - docker run --rm -it -v &quot;${pwd}:/root/env&quot; myos-buildenv
+2. Build for x86 :
+   - make build-x86_64
+</code></pre>
+<blockquote>
+<h4 id="adding-path-variable-">Adding Path Variable :</h4>
+</blockquote>
+<pre><code>&gt; Environment Variable:
+  1. Go to * This PC* .
+  2. Right Click on the *This PC* icon.
+  3. A new Window will open , From there go to the Advanced Settings.
+  4. A Dialogue Box will appear , Click on the *Environment Variables* from there.
+  5. Now click on path , then select Edit and from there
+     add a *path , where is qemu * there.
+  6. Click **ok** when done.
+</code></pre>
+<blockquote>
+<h4 id="emulate-">Emulate :</h4>
+</blockquote>
+<ul>
+<li>You can emulate your operating system using Qemu: (Don&rsquo;t forget to add qemu to your path!)
+<ol>
+<li>qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<h4 id="qemu-console-screen-">Qemu Console Screen :</h4>
+</blockquote>
+<ul>
+<li>When you are done doing all of the above mentioned steps , The qemu screen will open displaying  <em>NUST</em> using characters and Alphabets.This is printed using C , C++ programming.</li>
+</ul>
+<blockquote>
+<h4 id="links-for-downloading-above-prerequisites-">Links for Downloading Above Prerequisites :</h4>
+</blockquote>
+<pre><code>&gt; Links:
+   1. VS Code :     (https://code.visualstudio.com/download)
+   2. Docker :      (https://www.docker.com/products/docker-desktop)
+   3. Qemu :        (https://www.qemu.org/download/)
+   4. Mingw64       (https://sourceforge.net/projects/mingw-w64/)
+   5. Hugo :        (https://gohugo.io/)
+   6. Chocalatey :  (https://chocolatey.org/)
+</code></pre>
+<blockquote>
+<h4 id="help-materials--">Help Materials  :</h4>
+</blockquote>
+<pre><code>1. Youtube Video Link : https://www.youtube.com/watch?v=wz9CZBeXR6U
+2. Markdown Cheat Sheet : https://www.markdownguide.org/cheat-sheet/
+</code></pre>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://meik2333.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="https://meik2333.com/js/github-style.js"></script>
+
+
+
+</html>
